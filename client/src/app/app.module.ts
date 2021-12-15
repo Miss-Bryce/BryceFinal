@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { TeetimeService } from "./teetime.service";
+import { TeetimeComponent } from './teetime/teetime.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
-import { TeetimeComponent } from './teetime/teetime.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { TeetimeComponent } from './teetime/teetime.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [TeetimeService],
+  bootstrap: [TeetimeComponent]
 })
 export class AppModule { }
